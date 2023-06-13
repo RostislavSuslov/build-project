@@ -1,10 +1,16 @@
-section.genplan {
+.genplan {
     display: flex;
 
     min-height: calc(100vh - 200px);
-    .table {
-        width: 400px;
-        margin: 100px;
+
+    &-info {
+        @extend .build-info;
+
+    }
+
+    .genplan-info {
+        width: 100%;
+        margin: 60px 0 60px 30px;
     }
 }
 
@@ -16,25 +22,115 @@ section.genplan {
     stroke-opacity: 0.5;
     stroke-width: 3px;
     transition: .2s;
+
     &:hover {
         fill-opacity: 0.7;
         stroke-opacity: 0.8;
     }
+
+    &.active {
+        fill: #0055ff;
+    }
 }
 
-#build-1{
+.build-1 {
     fill: #FFAE00;
     stroke: #FFAE00;
 }
-#build-2{
+
+.build-2 {
     fill: #FF0062;
     stroke: #FF0062;
 }
-#build-3{
+
+.build-3 {
     fill: #00FF19;
     stroke: #00FF19;
 }
-#build-4{
+
+.build-4 {
     fill: #08D3FF;
     stroke: #08D3FF;
+}
+
+
+.build-info {
+    width: 650px;
+    margin: 60px 30px 60px 60px;
+    padding: 60px;
+    border-radius: 25px;
+
+    &__title {
+        margin-bottom: 24px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    h4 {
+        display: flex;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        padding: 18px 12px;
+
+        span {
+            display: inline-block;
+            margin-left: 18px;
+            font-weight: 900;
+            color: #0dd34b;
+        }
+    }
+
+    &__descriptions {
+        margin-top: 24px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        padding: 18px 12px;
+        min-height:  290px;
+    }
+}
+
+.sold {
+    &:hover {
+        path {
+            cursor: not-allowed;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 36px;
+
+}
+
+h2 {
+    font-size: 32px;
+
+}
+
+h3 {
+    font-size: 26px;
+
+}
+
+h4 {
+    font-size: 22px;
+
+}
+
+h5 {
+    font-size: 20px;
+
+}
+
+h6 {
+    font-size: 18px;
 }
