@@ -20,6 +20,13 @@
             fill: #6B68FF;
         }
     }
+    &.active {
+        .plan {
+            fill: #2b5c3295;
+            stroke: #42fb5e;
+            stroke-width: 5px;
+        }
+    }
 }
 
 .plan {
@@ -27,8 +34,32 @@
     stroke: #ff000000;
     cursor: pointer;
     &:hover {
-        fill: #74ff8950;
+        fill: #74ff893c;
         stroke: #42fb5e;
         stroke-width: 3px;
+    }
+}
+
+.flat-info {
+    display: flex;
+    padding: 36px 24px;
+}
+
+.floor-plan {
+    max-width: 1440px;
+    margin: 60px auto;
+}
+
+.flat-item {
+    padding: 20px;
+    border: 1px solid;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+    display: grid;
+    b {
+        font-size: 24px;
+        margin-top: auto;
+        padding-top: 18px;
     }
 }
